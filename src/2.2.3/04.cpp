@@ -3,20 +3,25 @@
 
 bool DeleteRange(SqList &L, int s, int t)
 {
-    if (L.length <= 0 ||
-        s > t ||
-        s > L.length ||
-        t > L.length)
+    if (L.length <= 0 || s > t)
     {
         return false;
     }
 
-    for (int i = s - 1; i + t - s + 1 < L.length; i++)
+    int start, end;
+    for (start = 0; start < L.length && L.data[start] < s; start++)
+        ;
+    if (start == L.length)
+        return false;
+    for (end = start; end < L.length && L.data[end] < t; end++)
+        ;
+
+    for (int i = start; i + end - start + 1 < L.length; i++)
     {
-        L.data[i] = L.data[i + t - s + 1];
+        L.data[i] = L.data[i + end - start + 1];
     }
 
-    L.length -= t - s + 1;
+    L.length -= end - start + 1;
 
     return true;
 }
