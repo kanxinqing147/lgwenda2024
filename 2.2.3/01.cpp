@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../include/SqList.h"
+#include "SqList.h"
 
 bool DeleteMin(SqList L, ElemType &e)
 {

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "../include/SqList.h"
+#include "SqList.h"
 
 void Reverse(SqList L)
 {
