@@ -7,7 +7,6 @@ bool DeleteSame(SqList &L)
     {
         return false;
     }
-    
 
     int low = 0, fast = 1;
     while (fast < L.length)
