@@ -1,5 +1,15 @@
 #include "LNode.h"
 
+LinkList List_HeadInsert(LinkList &L, ElemType x)
+{
+    LinkList newNode = (LNode *)malloc(sizeof(LNode));
+    newNode->data = x;
+    newNode->next = L;
+    L = newNode;
+
+    return newNode;
+}
+
 LinkList List_TailInsert(LinkList &L, ElemType x)
 {
     LinkList newNode = (LNode *)malloc(sizeof(LNode));
@@ -12,7 +22,7 @@ LinkList List_TailInsert(LinkList &L, ElemType x)
         ;
     tail->next = newNode;
     
-    return L;
+    return newNode;
 }
 
 void PrintLNode(LinkList L)
