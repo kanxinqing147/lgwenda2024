@@ -1,4 +1,6 @@
 #include "LNode.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 LinkList List_HeadInsert(LinkList &L, ElemType x)
 {

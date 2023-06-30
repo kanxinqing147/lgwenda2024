@@ -1,9 +1,7 @@
 #ifndef _LNODE_H_
 #define _LNODE_H_
 
-#include <stdio.h>
-#include <stdlib.h>
-#define ElemType int
+#define ElemType char
 
 typedef struct LNode
 {

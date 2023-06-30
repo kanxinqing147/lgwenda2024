@@ -8,14 +8,16 @@ void Delete_X(LinkList &L, ElemType x)
     {
         return;
     }
-    
+
     if (L->data == x)
     {
         LinkList p = L;
         L = L->next;
         free(p);
         Delete_X(L, x);
-    } else {
+    }
+    else
+    {
         Delete_X(L->next, x);
     }
 }

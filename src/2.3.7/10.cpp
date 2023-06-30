@@ -26,6 +26,9 @@ LinkList DisCreate_1(LinkList &A)
         }
         p = p->next;
     }
+
+    iB->next = NULL;
+    iA->next = NULL;
     
     return B;
 }
